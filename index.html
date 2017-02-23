@@ -63,7 +63,28 @@
                 <h1 style="visibility: hidden">Goal2Victory</h1>
                 <img src="logo.png" alt="Goal2Victory logo" /><br><br>
                 <p class="lead">Der kostenlose Fussballmanager</p>
-                <a href="https://game.goal2victory.net" class="button large">Direkt zum Spiel &RightTriangle;</a>
+                <form action="https://game.goal2victory.net" method="POST">
+                    <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+
+                        <div class="medium-4 column">
+                            <input type="hidden" name="formAction" value="login">
+                            <label> E-Mail
+                                <input type="email" class="stdInput" value="" name="email" placeholder="E-Mail" required="">
+                            </label>
+                        </div>
+                        <div class="medium-4 column">
+                            <label> Passwort
+                                <input type="password" class="stdInput" value="" name="password" placeholder="Passwort" required="">
+                            </label>
+                        </div>
+                        <div class="medium-4 column">
+                            <br>
+                            <button type="submit" class="button expanded">Anmelden</button>
+                        </div>
+                    </div>
+
+
+                </form>
             </div>
         </div>
 
@@ -113,12 +134,12 @@
             </div>
             <div class="column column-block">
                 <a href="screen4.jpg" title="Transfermarkt" class="th-item thumbnail">
-                <img src="screen4.jpg" alt="Transfermarkt">
+                    <img src="screen4.jpg" alt="Transfermarkt">
                 </a>
             </div>
             <div class="column column-block">
                 <a href="screen6.jpg" title="Stadion" class="th-item thumbnail">
-                <img src="screen6.jpg" alt="Stadion">
+                    <img src="screen6.jpg" alt="Stadion">
                 </a>
             </div>
             <div class="column column-block">
@@ -210,7 +231,7 @@
                     <img class=" transparent" src="logo.png" alt="logo" >
                 </a>
             </div>
-            
+
             <div class="column">
                 Commits auf Twitter
                 <a class="th-item thumbnail" href="https://twitter.com/Goal2Victory" style="background-image: url(twitter.png)">
