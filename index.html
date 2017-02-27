@@ -44,13 +44,27 @@
             .menu a {
                 color: #ffffff;
             }
+
+            .fbLogin {
+                background: url(fb_login.png) no-repeat;
+                width: 75px;
+                height: 22px;
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin-bottom: 2px;
+                cursor: pointer;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 9px;
+            }
         </style>
         <link href="//fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" type="text/css">
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
     </head>
     <body>
         <div id="fb-root"></div>
-        {assetic assets="js/fb.js" output="js" build_path="js/build" debug=false asset_url=asset_url nocache}<script type="text/javascript" src="{$asset_url}"></script>{/assetic}
+        <script type="text/javascript" src="fb.js"></script>
 
         <!-- Start Top Bar -->
         <nav class="top-bar" role="navigation">
@@ -83,13 +97,12 @@
                                 <input type="password" class="stdInput" value="" name="password" placeholder="Passwort" required="">
                             </label>
                         </div>
-                        <div class="medium-4 column">
+                        <div class="medium-3 column">
                             <br>
                             <button type="submit" class="button expanded">Anmelden</button>
                         </div>
-                    </div>
-                    <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
-                        <div class="medium-12-column text-center">
+                        <div class="medium-1 column text-center">
+                            <br>
                             <span class="fbLogin"></span>
                         </div>
                     </div>
