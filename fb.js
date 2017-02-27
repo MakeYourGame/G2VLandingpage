@@ -3,7 +3,7 @@ var Facebook =
     appID:          694259143968956,
     testAppID:      694272240634313,
     test:           false,
-    loginPage:      '/FacebookLogin',
+    loginPage:      'https://game.goal2victory.net/FacebookLogin',
     accessToken:    false,
 
     init: function ()
