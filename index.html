@@ -44,11 +44,27 @@
             .menu a {
                 color: #ffffff;
             }
+
+            .fbLogin {
+                background: url(fb_login.png) no-repeat;
+                width: 75px;
+                height: 22px;
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin-bottom: 2px;
+                cursor: pointer;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 9px;
+            }
         </style>
         <link href="//fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" type="text/css">
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
+        <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script type="text/javascript" src="fb.js"></script>
 
         <!-- Start Top Bar -->
         <nav class="top-bar" role="navigation">
@@ -81,12 +97,15 @@
                                 <input type="password" class="stdInput" value="" name="password" placeholder="Passwort" required="">
                             </label>
                         </div>
-                        <div class="medium-4 column">
+                        <div class="medium-3 column">
                             <br>
                             <button type="submit" class="button expanded">Anmelden</button>
                         </div>
+                        <div class="medium-1 column text-center">
+                            <br>
+                            <span class="fbLogin"></span>
+                        </div>
                     </div>
-
 
                 </form>
             </div>
@@ -171,7 +190,7 @@
 
         <div class="row">
             <div class="column">
-                <h4>Version 1.1.0 - mobile friendly and premium features for everyone <small>05.02.2017</small></h4>
+                <h4>Version 1.1.0 - mobile friendly and premium features for everyone <small>27.02.2017</small></h4>
                 <ul>
                     <li>Goal2Victory ist nun auf Mobilgeräten (Handys, Tablets) besser nutzbar</li>
                     <li>Premium-Accounts und Coins wurden abgeschafft. Alle Features stehen ab sofort für JEDEN zur Verfügung.</li>
@@ -207,7 +226,7 @@
             </div>
 
             <div class="column">Das Diskussionsforum
-                <a class="th-item thumbnail" href="http://http://community.goal2victory.net" style="background-image: url(forum.png)">
+                <a class="th-item thumbnail" href="http://community.goal2victory.net" style="background-image: url(forum.png)">
                     <img class=" transparent" src="forum.png" alt="forum" ></a>
             </div>
 
