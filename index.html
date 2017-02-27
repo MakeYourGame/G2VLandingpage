@@ -49,6 +49,8 @@
         <link href="/favicon.ico" rel="icon" type="image/x-icon">
     </head>
     <body>
+        <div id="fb-root"></div>
+        {assetic assets="js/fb.js" output="js" build_path="js/build" debug=false asset_url=asset_url nocache}<script type="text/javascript" src="{$asset_url}"></script>{/assetic}
 
         <!-- Start Top Bar -->
         <nav class="top-bar" role="navigation">
