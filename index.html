@@ -65,6 +65,16 @@
             margin-right: auto;
             margin-top: 9px;
         }
+
+        #fbRegister span {
+            background: rgba(0, 0, 0, 0) url("fb_connect.png") no-repeat scroll 0 0;
+            width: 189px;
+            margin: 0;
+        }
+
+        .accordion-title h3 {
+            background: none;
+        }
     </style>
     <link href="//fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" type="text/css">
     <link href="/favicon.ico" rel="icon" type="image/x-icon">
@@ -95,11 +105,11 @@
 
         <ul class="accordion" data-accordion>
             <li class="accordion-item is-active" data-accordion-item>
-                <a href="#" class="accordion-title">Login</a>
+                <a href="#" class="accordion-title"><h3>Login</h3></a>
 
                 <div class="accordion-content" data-tab-content>
                     <form action="https://game.goal2victory.net" method="POST">
-                        <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+                        <div class="row" style="background-color: rgba(254, 254, 254, 0.7);">
                             <div class="medium-4 column">
                                 <input type="hidden" name="formAction" value="login">
                                 <label> E-Mail
@@ -126,15 +136,13 @@
                 </div>
             </li>
             <li class="accordion-item" data-accordion-item>
-                <a href="#" class="accordion-title">Registrierung</a>
+                <a href="#" class="accordion-title"><h3>Registrierung</h3></a>
 
                 <div class="accordion-content" data-tab-content>
                     <form action="https://game.goal2victory.net" method="POST">
                         <input type="hidden" name="formAction" value="signup">
-
                         <div class="row" style="background-color: rgba(254, 254, 254, 0.7);">
                             <div class="medium-4 column">
-                                <input type="hidden" name="formAction" value="login">
                                 <label> Managername <span class="help-text"
                                                           id="nameHelpText">(mindestens 5 Zeichen)</span>
                                     <input type="text" class="stdInput" value=""
@@ -170,7 +178,7 @@
                                 <br>
                             </div>
                             <div class="medium-4 column">
-                                <a style="border: none;" class="small hollow secondary button"><span
+                                <a style="border: none;" id="fbRegister" class="small hollow secondary button"><span
                                         class="fbSubmit fbLogin"></span></a>
                             </div>
                         </div>
