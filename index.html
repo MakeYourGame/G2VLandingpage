@@ -1,287 +1,381 @@
 <!doctype html>
 <html class="no-js" lang="de">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Goal2Victory</title>
-        <link rel="stylesheet" href="//dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-        <style>
-            img.transparent {opacity: 0;}
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Goal2Victory</title>
+    <link rel="stylesheet" href="//dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <style>
+        img.transparent {
+            opacity: 0;
+        }
 
-            .th-item{
-                display: block;
-                height: 11em;
-                width: 100%;
-                overflow: hidden;
-                background-size: cover;
-            }
-            .lead {text-shadow: 1px 1px 2px black;}
-            .row ul li {margin-left: 1em;}
+        .th-item {
+            display: block;
+            height: 11em;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+        }
 
-            h1, h2, h3 {
-                padding: 0.6rem;
-                text-shadow: #fff 1px 1px;
-                font-family: 'Roboto Slab', serif;
-                background: #e0e0e0;
-                background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#e0e0e0), to(#fff));
-                background: -webkit-linear-gradient(left, #e0e0e0, #fff);
-                background: -moz-linear-gradient(left, #e0e0e0, #fff);
-                background: -ms-linear-gradient(left, #e0e0e0, #fff);
-                background: -o-linear-gradient(left, #e0e0e0, #fff);
-                color: #CC0000;
-                margin-bottom: 0.5rem;
-            }
+        .lead {
+            text-shadow: 1px 1px 2px black;
+        }
 
-            nav.top-bar {
-                background-color: #111;
-                color: #eee;
-            }
+        .row ul li {
+            margin-left: 1em;
+        }
 
-            .top-bar ul {
-                background-color: transparent;
-            }
+        h1, h2, h3 {
+            padding: 0.6rem;
+            text-shadow: #fff 1px 1px;
+            font-family: 'Roboto Slab', serif;
+            background: #e0e0e0;
+            background: -webkit-gradient(linear, 100% 0%, 0% 0%, from(#e0e0e0), to(#fff));
+            background: -webkit-linear-gradient(left, #e0e0e0, #fff);
+            background: -moz-linear-gradient(left, #e0e0e0, #fff);
+            background: -ms-linear-gradient(left, #e0e0e0, #fff);
+            background: -o-linear-gradient(left, #e0e0e0, #fff);
+            color: #CC0000;
+            margin-bottom: 0.5rem;
+        }
 
-            .menu a {
-                color: #ffffff;
-            }
+        nav.top-bar {
+            background-color: #111;
+            color: #eee;
+        }
 
-            .fbLogin {
-                background: url(fb_login.png) no-repeat;
-                width: 75px;
-                height: 22px;
-                display: inline-block;
-                vertical-align: text-bottom;
-                margin-bottom: 2px;
-                cursor: pointer;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 9px;
-            }
-        </style>
-        <link href="//fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" type="text/css">
-        <link href="/favicon.ico" rel="icon" type="image/x-icon">
-        <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
-    </head>
-    <body>
-        <div id="fb-root"></div>
-        <script type="text/javascript" src="fb.js"></script>
+        .top-bar ul {
+            background-color: transparent;
+        }
 
-        <!-- Start Top Bar -->
-        <nav class="top-bar" role="navigation">
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li><a href="#spiel">Das Spiel</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#community">Community</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- End Top Bar -->
+        .menu a {
+            color: #ffffff;
+        }
 
-        <div class="callout large" style="background-image: url(green.jpg); background-repeat: repeat; color: white">
-            <div class="row column text-center">
-                <h1 style="visibility: hidden">Goal2Victory</h1>
-                <img src="logo.png" alt="Goal2Victory logo" /><br><br>
-                <p class="lead">Der kostenlose Fussballmanager</p>
-                <form action="https://game.goal2victory.net" method="POST">
-                    <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+        .fbLogin {
+            background: url(fb_login.png) no-repeat;
+            width: 75px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: text-bottom;
+            margin-bottom: 2px;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 9px;
+        }
+    </style>
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script type="text/javascript" src="fb.js"></script>
 
-                        <div class="medium-4 column">
-                            <input type="hidden" name="formAction" value="login">
-                            <label> E-Mail
-                                <input type="email" class="stdInput" value="" name="email" placeholder="E-Mail" required="">
-                            </label>
+<!-- Start Top Bar -->
+<nav class="top-bar" role="navigation">
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#spiel">Das Spiel</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#community">Community</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- End Top Bar -->
+
+<div class="callout large" style="background-image: url(green.jpg); background-repeat: repeat; color: white">
+    <div class="row column text-center">
+        <h1 style="visibility: hidden">Goal2Victory</h1>
+        <img src="logo.png" alt="Goal2Victory logo"/><br><br>
+
+        <p class="lead">Der kostenlose Fussballmanager</p>
+
+        <ul class="accordion" data-accordion>
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Login</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <form action="https://game.goal2victory.net" method="POST">
+                        <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+                            <div class="medium-4 column">
+                                <input type="hidden" name="formAction" value="login">
+                                <label> E-Mail
+                                    <input type="email" class="stdInput" value="" name="email" placeholder="E-Mail"
+                                           required="">
+                                </label>
+                            </div>
+                            <div class="medium-4 column">
+                                <label> Passwort
+                                    <input type="password" class="stdInput" value="" name="password"
+                                           placeholder="Passwort" required="">
+                                </label>
+                            </div>
+                            <div class="medium-3 column">
+                                <br>
+                                <button type="submit" class="button expanded">Anmelden</button>
+                            </div>
+                            <div class="medium-1 column text-center">
+                                <br>
+                                <span class="fbLogin"></span>
+                            </div>
                         </div>
-                        <div class="medium-4 column">
-                            <label> Passwort
-                                <input type="password" class="stdInput" value="" name="password" placeholder="Passwort" required="">
-                            </label>
+                    </form>
+                </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Registrierung</a>
+
+                <div class="accordion-content" data-tab-content>
+                    <form action="https://game.goal2victory.net" method="POST">
+                        <input type="hidden" name="formAction" value="signup">
+
+                        <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+                            <div class="medium-4 column">
+                                <input type="hidden" name="formAction" value="login">
+                                <label> Managername <span class="help-text"
+                                                          id="nameHelpText">(mindestens 5 Zeichen)</span>
+                                    <input type="text" class="stdInput" value=""
+                                           placeholder="Managername"
+                                           name="managername">
+                                </label>
+                            </div>
+                            <div class="medium-4 column">
+                                <label> Passwort <span class="help-text" id="pwHelpText">(mindestens 6 Zeichen)</span>
+                                    <input type="password" class="stdInput" value=""
+                                           placeholder="Passwort"
+                                           name="password">
+                                </label>
+                            </div>
+                            <div class="medium-4 column">
+                                <label> E-Mail <span class="help-text" id="emailHelpText">(wird für die <b>Account-Aktivierung</b> benötigt)</span>
+                                    <input type="email" class="stdInput" value=""
+                                           placeholder="E-Mail"
+                                           name="email">
+                                </label>
+                            </div>
                         </div>
-                        <div class="medium-3 column">
-                            <br>
-                            <button type="submit" class="button expanded">Anmelden</button>
+                        <div class="row callout" style="background-color: rgba(254, 254, 254, 0.7);">
+                            <div class="medium-4 column">
+                                <label>
+                                    <input type="checkbox" name="agb" required>
+                                    <a style="text-decoration: underline" href="AGB.pdf" target="_blank">AGB</a> gelesen
+                                    und akzeptiert!
+                                </label>
+                            </div>
+                            <div class="medium-4 column">
+                                <button type="submit" class="button expanded submit">Anmelden</button><br>
+                            </div>
+                            <div class="medium-4 column">
+                                <a style="border: none;" class="small hollow secondary button"><span class="fbSubmit fbLogin"></span></a>
+                            </div>
                         </div>
-                        <div class="medium-1 column text-center">
-                            <br>
-                            <span class="fbLogin"></span>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+            </li>
+    </div>
 
-                </form>
-            </div>
-        </div>
+    </form>
+</div>
+</div>
 
-        <div class="row">
-            <div class="medium-6 columns medium-push-6">
-                <img class="thumbnail" src="trainer.png">
-            </div>
-            <div class="medium-6 columns medium-pull-6">
-                <h2>Deine Liga. Deine Freunde. Deine Regeln.</h2>
-                <p>Goal2Victory ist ein Online-Spiel aus dem Genre der Fussballmanager. Als Manager und Trainer eines Fussballvereins kümmert man sich 
-                    um den Profikader durch Spielerkäufe und Verkäufe auf dem Transfermarkt. Mit dem Training sorgt man für die Fitness und Entwicklung 
-                    der Fussballspieler, macht die Aufstellung für Ligaspiele und gibt taktische Anweisungen während eines Livespiels. Mit dem Ausbau vom 
-                    Stadion und Stadionumfeld hat man weitere Möglichkeiten auf die Finanzen des Vereins Einfluss zu nehmen. Alles wie in der realen Fussballwelt.</p>
-            </div>
-        </div>
+<div class="row">
+    <div class="medium-6 columns medium-push-6">
+        <img class="thumbnail" src="trainer.png">
+    </div>
+    <div class="medium-6 columns medium-pull-6">
+        <h2>Deine Liga. Deine Freunde. Deine Regeln.</h2>
 
-        <div class="row">
-            <div class="medium-4 columns">
-                <h3>Eigene Ligen mit Freunden</h3>
-                <p>Spiele in kleinen Kreis nur mit Deinen Freunden. Ihr könnt entscheiden wie viele Spielklassen es gibt und wie groß die Ligen sind.</p>
-            </div>
-            <div class="medium-4 columns">
-                <h3>Livespiel mit Taktik & Spielerwechsel</h3>
-                <p>Wähle aus verschiedenen Spielsystemen wie etwa 3-5-2 und wechsle müde Spieler während des Spiels aus. </p>
-            </div>
-            <div class="medium-4 columns">
-                <h3>Kostenlos und ohne Download</h3>
-                <p>Goal2Victory läuft in modernen Browsern und auf Mobilgeräten. Wenn Du bei Facebook registriert bist, kannst Du sofort mitspielen.</p>
-            </div>
-        </div>
-        <br>
-        <div class="row small-up-2 medium-up-3 large-up-4">
-            <div class="column column-block">
-                <a href="screen1.jpg" title="Büro" class="th-item thumbnail">
-                    <img src="screen1.jpg" alt="Büro">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="screen2.jpg" title="Aufstellung" class="th-item thumbnail" >
-                    <img src="screen2.jpg" alt="Aufstellung">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="screen3.jpg" title="Training" class="th-item thumbnail">
-                    <img src="screen3.jpg" alt="Training">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="screen4.jpg" title="Transfermarkt" class="th-item thumbnail">
-                    <img src="screen4.jpg" alt="Transfermarkt">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="screen6.jpg" title="Stadion" class="th-item thumbnail">
-                    <img src="screen6.jpg" alt="Stadion">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="screen7.jpg" title="Bank" class="th-item thumbnail">
-                    <img src="screen7.jpg" alt="Bank">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="mobile1.png" title="Mobilversion"  class="th-item thumbnail">
-                    <img src="mobile1.png" alt="Mobilversion">
-                </a>
-            </div>
-            <div class="column column-block">
-                <a href="mobile2.png" class="th-item thumbnail" title="Mobilversion Team" style="background-image: url(mobile2.png)">
-                    <img src="screen1.png"  alt="Mobilversion Team">
-                </a>
-            </div>
-        </div>
+        <p>Goal2Victory ist ein Online-Spiel aus dem Genre der Fussballmanager. Als Manager und Trainer eines
+            Fussballvereins kümmert man sich
+            um den Profikader durch Spielerkäufe und Verkäufe auf dem Transfermarkt. Mit dem Training sorgt man für die
+            Fitness und Entwicklung
+            der Fussballspieler, macht die Aufstellung für Ligaspiele und gibt taktische Anweisungen während eines
+            Livespiels. Mit dem Ausbau vom
+            Stadion und Stadionumfeld hat man weitere Möglichkeiten auf die Finanzen des Vereins Einfluss zu nehmen.
+            Alles wie in der realen Fussballwelt.</p>
+    </div>
+</div>
 
-        <hr>
-        <a name="news"></a>
-        <div class="row column">
-            <h2>News</h2>
-        </div>
+<div class="row">
+    <div class="medium-4 columns">
+        <h3>Eigene Ligen mit Freunden</h3>
 
-        <div class="row">
-            <div class="column">
-                <h4>Version 1.1.0 - mobile friendly and premium features for everyone <small>27.02.2017</small></h4>
-                <ul>
-                    <li>Goal2Victory ist nun auf Mobilgeräten (Handys, Tablets) besser nutzbar</li>
-                    <li>Premium-Accounts und Coins wurden abgeschafft. Alle Features stehen ab sofort für JEDEN zur Verfügung.</li>
-                    <li>Die Hilfe ist nun Bestandteil der verschiedenen Ansichten und kann mit dem Hilfe-Button aktiviert werden.</li>
-                    <li>Die Spieler können in der Vertragsansicht nach Stärke, Wert etc. sortiert werden.</li>
-                    <li>Eine automatische Aufstellung kann als Grundlage zur weiteren Optimierung genutzt werden.</li>
-                    <li>Inaktive Nutzer werden zum Ende der Saison aus den SEASONS entfernt.</li>
-                </ul>
-            </div>
+        <p>Spiele in kleinen Kreis nur mit Deinen Freunden. Ihr könnt entscheiden wie viele Spielklassen es gibt und wie
+            groß die Ligen sind.</p>
+    </div>
+    <div class="medium-4 columns">
+        <h3>Livespiel mit Taktik & Spielerwechsel</h3>
 
-            <div class="column">
-                <h4>Version 1.0.6 online <small>03.06.2016</small></h4>
-                <ul>
-                    <li><strong>Der Spielleiter kann nachträglich Nutzer zur Spielrunde hinzufügen.</strong></li>
-                    <li>In der Bank sind die Startwerte für Kredite und Einlagen auf 0 gesetzt um versehentliche Klicks zu vermeiden.</li>
-                    <li>Die interne Fehlerbehandlung wurde verbessert.</li>
-                </ul>
-            </div>
-        </div>
+        <p>Wähle aus verschiedenen Spielsystemen wie etwa 3-5-2 und wechsle müde Spieler während des Spiels aus. </p>
+    </div>
+    <div class="medium-4 columns">
+        <h3>Kostenlos und ohne Download</h3>
 
+        <p>Goal2Victory läuft in modernen Browsern und auf Mobilgeräten. Wenn Du bei Facebook registriert bist, kannst
+            Du sofort mitspielen.</p>
+    </div>
+</div>
+<br>
 
-        <hr>
-        <a name="community"></a>
-        <div class="row column">
-            <h2>Community</h2>
-        </div>
+<div class="row small-up-2 medium-up-3 large-up-4">
+    <div class="column column-block">
+        <a href="screen1.jpg" title="Büro" class="th-item thumbnail">
+            <img src="screen1.jpg" alt="Büro">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="screen2.jpg" title="Aufstellung" class="th-item thumbnail">
+            <img src="screen2.jpg" alt="Aufstellung">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="screen3.jpg" title="Training" class="th-item thumbnail">
+            <img src="screen3.jpg" alt="Training">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="screen4.jpg" title="Transfermarkt" class="th-item thumbnail">
+            <img src="screen4.jpg" alt="Transfermarkt">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="screen6.jpg" title="Stadion" class="th-item thumbnail">
+            <img src="screen6.jpg" alt="Stadion">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="screen7.jpg" title="Bank" class="th-item thumbnail">
+            <img src="screen7.jpg" alt="Bank">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="mobile1.png" title="Mobilversion" class="th-item thumbnail">
+            <img src="mobile1.png" alt="Mobilversion">
+        </a>
+    </div>
+    <div class="column column-block">
+        <a href="mobile2.png" class="th-item thumbnail" title="Mobilversion Team"
+           style="background-image: url(mobile2.png)">
+            <img src="screen1.png" alt="Mobilversion Team">
+        </a>
+    </div>
+</div>
 
-        <div class="row medium-up-3 large-up-4">
+<hr>
+<a name="news"></a>
 
-            <div class="column">Zum Spiel
-                <a class="th-item thumbnail" href="https://game.goal2victory.net" style="background-image: url(logo.png)">
-                    <img class="thumbnail transparent" src="logo.png" alt="logo" ></a>
-            </div>
+<div class="row column">
+    <h2>News</h2>
+</div>
 
-            <div class="column">Das Diskussionsforum
-                <a class="th-item thumbnail" href="http://community.goal2victory.net" style="background-image: url(forum.png)">
-                    <img class=" transparent" src="forum.png" alt="forum" ></a>
-            </div>
+<div class="row">
+    <div class="column">
+        <h4>Version 1.1.0 - mobile friendly and premium features for everyone
+            <small>27.02.2017</small>
+        </h4>
+        <ul>
+            <li>Goal2Victory ist nun auf Mobilgeräten (Handys, Tablets) besser nutzbar</li>
+            <li>Premium-Accounts und Coins wurden abgeschafft. Alle Features stehen ab sofort für JEDEN zur Verfügung.
+            </li>
+            <li>Die Hilfe ist nun Bestandteil der verschiedenen Ansichten und kann mit dem Hilfe-Button aktiviert
+                werden.
+            </li>
+            <li>Die Spieler können in der Vertragsansicht nach Stärke, Wert etc. sortiert werden.</li>
+            <li>Eine automatische Aufstellung kann als Grundlage zur weiteren Optimierung genutzt werden.</li>
+            <li>Inaktive Nutzer werden zum Ende der Saison aus den SEASONS entfernt.</li>
+        </ul>
+    </div>
 
-
-            <div class="column">Facebook
-                <a class="th-item thumbnail" href="https://facebook.com/Goal2Victory" style="background-image: url(facebook.png)">
-                    <img class=" transparent" src="facebook.png" alt="facebook" ></a>
-            </div>
-
-            <div class="column">
-                Diskussion auf Slack
-                <a class="th-item thumbnail"  href="https://goal2victory.slack.com" style="background-image: url(slack.png)">
-                    <img class="thumbnail transparent" src="slack.png" alt="slack" ></a>
-            </div>
-
-            <div class="column">
-                Ideen und Roadmap auf Trello
-                <a class="th-item thumbnail"   href="https://trello.com/b/0sQmb0UB/goal2victory-roadmap" style="background-image: url(trello.png)">
-                    <img class=" transparent" src="trello.png" alt="trello"></a>
-            </div>
-
-            <div class="column">
-                Betaserver
-                <a class="th-item thumbnail" href="https://dev.goal2victory.net" style="background-image: url(logo.png)">
-                    <img class=" transparent" src="logo.png" alt="logo" >
-                </a>
-            </div>
-
-            <div class="column">
-                Commits auf Twitter
-                <a class="th-item thumbnail" href="https://twitter.com/Goal2Victory" style="background-image: url(twitter.png)">
-                    <img class=" transparent" src="twitter.png" alt="twitter" >
-                </a>
-            </div>
-        </div>
+    <div class="column">
+        <h4>Version 1.0.6 online
+            <small>03.06.2016</small>
+        </h4>
+        <ul>
+            <li><strong>Der Spielleiter kann nachträglich Nutzer zur Spielrunde hinzufügen.</strong></li>
+            <li>In der Bank sind die Startwerte für Kredite und Einlagen auf 0 gesetzt um versehentliche Klicks zu
+                vermeiden.
+            </li>
+            <li>Die interne Fehlerbehandlung wurde verbessert.</li>
+        </ul>
+    </div>
+</div>
 
 
+<hr>
+<a name="community"></a>
 
-        <br>
-        <nav class="top-bar" role="navigation">
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li><a href="#spiel">Das Spiel</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#community">Community</a></li>
-                    <li><a href="impressum.html">Impressum</a></li>
-                    <li><a href="http://makeyourgame.net/">&copy; MakeYourGame UG 2017</a></li>
-                </ul>
-            </div>
-        </nav>
+<div class="row column">
+    <h2>Community</h2>
+</div>
 
-        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="//dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
-    </body>
+<div class="row medium-up-3 large-up-4">
+
+    <div class="column">Zum Spiel
+        <a class="th-item thumbnail" href="https://game.goal2victory.net" style="background-image: url(logo.png)">
+            <img class="thumbnail transparent" src="logo.png" alt="logo"></a>
+    </div>
+
+    <div class="column">Das Diskussionsforum
+        <a class="th-item thumbnail" href="http://community.goal2victory.net" style="background-image: url(forum.png)">
+            <img class=" transparent" src="forum.png" alt="forum"></a>
+    </div>
+
+
+    <div class="column">Facebook
+        <a class="th-item thumbnail" href="https://facebook.com/Goal2Victory"
+           style="background-image: url(facebook.png)">
+            <img class=" transparent" src="facebook.png" alt="facebook"></a>
+    </div>
+
+    <div class="column">
+        Diskussion auf Slack
+        <a class="th-item thumbnail" href="https://goal2victory.slack.com" style="background-image: url(slack.png)">
+            <img class="thumbnail transparent" src="slack.png" alt="slack"></a>
+    </div>
+
+    <div class="column">
+        Ideen und Roadmap auf Trello
+        <a class="th-item thumbnail" href="https://trello.com/b/0sQmb0UB/goal2victory-roadmap"
+           style="background-image: url(trello.png)">
+            <img class=" transparent" src="trello.png" alt="trello"></a>
+    </div>
+
+    <div class="column">
+        Betaserver
+        <a class="th-item thumbnail" href="https://dev.goal2victory.net" style="background-image: url(logo.png)">
+            <img class=" transparent" src="logo.png" alt="logo">
+        </a>
+    </div>
+
+    <div class="column">
+        Commits auf Twitter
+        <a class="th-item thumbnail" href="https://twitter.com/Goal2Victory" style="background-image: url(twitter.png)">
+            <img class=" transparent" src="twitter.png" alt="twitter">
+        </a>
+    </div>
+</div>
+
+
+<br>
+<nav class="top-bar" role="navigation">
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#spiel">Das Spiel</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="http://makeyourgame.net/">&copy; MakeYourGame UG 2017</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="//dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
 </html>
